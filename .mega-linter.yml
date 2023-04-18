@@ -1,0 +1,42 @@
+---
+# Configuration file for MegaLinter
+# See all available variables at https://megalinter.github.io/configuration/ and in linters documentation
+PRINT_ALPACA: false
+APPLY_FIXES: all # When active, APPLY_FIXES must also be defined as environment variable (in github/workflows/mega-linter.yml or other CI tool)
+DISABLE_LINTERS:
+  - JSON_PRETTIER
+  - REPOSITORY_GITLEAKS
+  - REPOSITORY_CHECKOV
+  - REPOSITORY_DEVSKIM
+  - REPOSITORY_DUSTILOCK
+  - REPOSITORY_SECRETLINT
+  - REPOSITORY_SYFT
+  - REPOSITORY_TRIVY
+  - SPELL_CSPELL
+  - SPELL_MISSPELL
+  - SPELL_PROSELINT
+  - BASH_EXEC
+  - BASH_SHFMT
+  - COPYPASTE_JSCPD
+  - POWERSHELL_POWERSHELL
+  - SQL_SQL_LINT
+  - HTML_HTMLHINT
+  - HTML_DJLINT
+  - GIT_GIT_DIFF
+  - JSON_JSONLINT
+  - JSON_V8R
+  - JSON_PRETTIER
+  - MARKDOWN_MARKDOWN_LINK_CHECK
+  - DOCKERFILE_DOCKERFILELINT
+  - PYTHON_FLAKE8
+  - CSS_SCSS_LINT
+  - REPOSITORY_GIT_DIFF
+  - YAML_V8R
+PRINT_ALL_FILES: false
+FILTER_REGEX_EXCLUDE: '\.github|.megalinter-reports|bin'
+DOCKERFILE_HADOLINT_ARGUMENTS: "--ignore DL3003 --ignore DL3007 --ignore DL3013 --ignore DL3016 --ignore DL3018 --ignore DL3028 --ignore DL4001 --ignore DL4006 --ignore SC2015 --ignore SC2016 --ignore SC2039 --ignore SC2086 --ignore SC1091"
+SHOW_ELAPSED_TIME: true
+JSON_REPORTER: false
+GITHUB_STATUS_REPORTER: true
+PARALLEL: true
+REPORT_OUTPUT_FOLDER: .megalinter-reports
