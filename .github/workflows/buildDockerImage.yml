@@ -66,6 +66,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           context: src/elixir/.
+          file: src/elixir/Dockerfile
           push: true
 
           tags: ${{ steps.meta.outputs.tags }}
