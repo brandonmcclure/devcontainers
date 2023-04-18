@@ -61,6 +61,10 @@ jobs:
       - name: debug
         shell: bash
         run: |
+          ls -ld $PWD/src/elixir*
+      - name: debug
+        shell: bash
+        run: |
           ls -ld $GITHUB_WORKSPACE
       - name: Build Docker image (non main branch)
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
