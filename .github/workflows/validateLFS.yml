@@ -16,6 +16,7 @@ concurrency:
 jobs:
   validateLFS:
     name: LFS Validation
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
