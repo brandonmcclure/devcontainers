@@ -24,6 +24,7 @@ concurrency:
 jobs:
   MegaLinter:
     name: MegaLinter
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       # Git Checkout
