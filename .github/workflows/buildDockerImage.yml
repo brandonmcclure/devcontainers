@@ -50,28 +50,12 @@ jobs:
             type=raw,value=latest
           images: |
             ghcr.io/brandonmcclure/devcontainers/${{ env.IMAGE_NAME }}
-      - name: debug
-        shell: bash
-        run: |
-          ls -ld $PWD/*
-      - name: debug
-        shell: bash
-        run: |
-          ls -ld $PWD/src/*
-      - name: debug
-        shell: bash
-        run: |
-          ls -ld $PWD/src/elixir/*
-      - name: debug
-        shell: bash
-        run: |
-          ls -ld $GITHUB_WORKSPACE/*
       - name: Build Docker image (non main branch)
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         if: github.ref != 'refs/heads/main'
         with:
-          context: $GITHUB_WORKSPACE/src/elixir/.
-          file: Dockerfile
+          context: src/elixir/.
+          file: src/elixir/Dockerfile
           load: true
           push: false
 
