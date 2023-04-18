@@ -10,11 +10,13 @@ on:
       - main
     paths: 
       - src/elixir/
+      - .github/workflows/buildDockerImage.yml
   pull_request:
     branches:
       - main
     paths:
       - src/elixir/
+      - .github/workflows/buildDockerImage.yml
 
 env:
   IMAGE_NAME: devcontainer_elixir
